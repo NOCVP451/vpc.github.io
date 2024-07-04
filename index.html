@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+25&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+  <title>AVAI VPC</title>
+</head>
+
+<body>
+  <div class="instrument-cover">
+    <div class="knob-container">
+      <input type="range" min="0" max="100" value="50" class="knob" id="myKnob">
+    </div>
+
+
+<div class="substrate">
+  <p>Feedback/Обратная связь:</p>
+  <p>✉ Post: VPC@gmail.ru</p>
+</div>
+
+    <div class="button-container">
+      <div data-d="t" class="button"></div>
+      <div data-d="y" class="button"></div>
+      <div data-d="u" class="button"></div>
+      <div data-d="i" class="button"></div>
+
+      <div data-d="q" class="button"></div>
+      <div data-d="w" class="button"></div>
+      <div data-d="e" class="button"></div>
+      <div data-d="r" class="button"></div>
+
+      <div data-d="a" class="button"></div>
+      <div data-d="s" class="button"></div>
+      <div data-d="d" class="button"></div>
+      <div data-d="f" class="button"></div>
+
+      <div data-d="z" class="button"></div>
+      <div data-d="x" class="button"></div>
+      <div data-d="c" class="button"></div>
+      <div data-d="v" class="button"></div>
+
+      <button id="ASong" onClick="playPause()">
+        <audio src="!METRO.wav" autoplay loop></audio>
+
+      </button>
+
+      <button id="BSong" onClick="playPause()">
+        <audio src="vinyl_001.wav" autoplay loop></audio>
+
+      </button>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+
+
+  <div class="screen">
+    <div class="tooltip">DRUMS/
+      <span class="tooltiptext">
+        DRUMS<br>
+        "Z"-kick<br>
+        "X"-OpenHat<br>
+        "C"-Hat<br>
+        "V"-Snare<br>
+      </span>
+    </div>
+    <div class="tooltip">MELODY/
+      <span class="tooltiptext">
+        MELODY<br>
+        "A"-PianoChop1 "Q"-SampleChop1<br>
+        "S"-PianoChop2 "W"-SampleChop2<br>
+        "D"-PianoChop3 "E"-SampleChop3 <br>
+        "F"-PianoChop4 "R"-SampleChop4 <br>
+      </span>
+
+      Vol: <span id="demo"></span>
+    
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <audio data-a="t" src="horn 1.wav"></audio>
+  <audio data-a="y" src="horn 2.wav"></audio>
+  <audio data-a="u" src="horn 3.wav"></audio>
+  <audio data-a="i" src="horn 4.wav"></audio>
+
+  <audio data-a="q" src="sample 1.wav"></audio>
+  <audio data-a="w" src="sample 2.wav"></audio>
+  <audio data-a="e" src="sample 3.wav"></audio>
+  <audio data-a="r" src="sample 4.wav"></audio>
+
+  <audio data-a="a" src="key 1.wav"></audio>
+  <audio data-a="s" src="key 2.wav"></audio>
+  <audio data-a="d" src="key 3.wav"></audio>
+  <audio data-a="f" src="key 4.wav"></audio>
+
+  <audio data-a="z" src="!KICK.wav"></audio>
+  <audio data-a="x" src="!OH.wav"></audio>
+  <audio data-a="c" src="!HAT.wav"></audio>
+  <audio data-a="v" src="!SNARE.wav"></audio>
+
+  <script>
+    var aud = document.getElementById("ASong").children[0];
+    var isPlaying = false;
+    aud.pause();
+
+    function playPause() {
+      if (isPlaying) {
+        aud.pause();
+      } else {
+        aud.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
+
+  <script>
+    var aud = document.getElementById("BSong").children[0];
+    var isPlaying = false;
+    aud.pause();
+
+    function playPause() {
+      if (isPlaying) {
+        aud.pause();
+      } else {
+        aud.play();
+      }
+      isPlaying = !isPlaying;
+    }
+  </script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

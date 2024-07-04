@@ -1,0 +1,209 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #007a3f;
+}
+
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dela-gothic-one-regular { 
+ font-family: "Dela Gothic One",
+ sans-serif;  font-weight: 400; 
+ font-style: normal; 
+} 
+
+.instrument-cover {
+  width: 595px;
+  height: 461px;
+  border-radius: 19px;
+  background-image: url('cover2.jpg');
+  background-size: cover;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  /* Добавьте это, чтобы обрезать любые выходящие за пределы элементы */
+}
+
+
+
+.screen {
+  width: 205px;
+  height: 83px;
+  background: #63C1C1;
+  border: 20px solid #202833;
+  display: flex;
+  position: relative;
+  top: -149px;
+  right: 570px;
+  border-radius: 2px;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #356A6A;
+
+}
+
+.button-container {
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  padding-top: 185px;
+  padding-right: 65px;
+  padding-bottom: 55px;
+  padding-left: 140px;
+  
+  /* Паддинг внутри .instrument-cover */
+  width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+  /* Учитывает паддинги в общей ширине и высоте */
+}
+
+.button {
+  background: #A4A3A1;
+  border: none;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.41);
+  box-shadow: 10px 10px 8px -6px rgba(0, 0, 0, 0.35);
+
+}
+
+.pads {
+  width: 596px;
+  height: 461px;
+  border-radius: 19px;
+  background: url("Group 1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.pad1 {
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  background: #A4A3A1;
+
+}
+
+.hit {
+  background: none;
+  border: 2px solid #f00;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+
+}
+
+.tooltip {
+  position: relative;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Текст подсказки */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  font-size: 15px;
+
+
+  /* Расположите текст подсказки */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Исчезают в подсказке */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Подсказка стрелка */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+.knob-container{
+rotate: -90deg;
+margin-top: 150px;
+margin-left: -50px;
+}
+
+.knob{
+  -webkit-appearance: none; 
+ width: 160px;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: black;
+  margin-left: 60px;
+ }
+
+
+.knob[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #A4A3A1;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+}
+
+
+.knob[type=range]::-webkit-slider-thumb:hover {
+    background: #C0C0C0; 
+}
+
+
+.substrate{
+   background-color: #004220;
+   background: linear-gradient(#007a3f, #004220);
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   text-align: center; 
+   width: 100%;
+   height:60px;   
+   font-size: 19px;
+   color: #fad201;
+   font-family: "Dela Gothic One", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   line-height: 2px
+ }
